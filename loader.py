@@ -1,3 +1,7 @@
+### Loads patients from a data source 
+### Important: needs to be rewritten for each new data source
+### Plan to implement a more general version of this
+
 import pandas as pd
 from models import Isolate, Sample, BC_Sample, T2_Sample, Other_Sample, Episode, Patient
 from bactdict import OTHER_SAMPLES
@@ -76,7 +80,7 @@ def patients_list(dfs, df_times = None, df_times_bact_id = None):
             sample_id = row['ProvID']
             if patient_id not in patients:
                 patient = create_patient(row)
-                patients[patient_id] = patient  # Add new patient to the dictionary
+                patients[patient_id] = patient  
             else:
                 patient = patients[patient_id]
         
