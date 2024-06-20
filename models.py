@@ -19,6 +19,7 @@ class Isolate:
     def __eq__(self, other):
         if not isinstance(other, Isolate):
             return False
+        ## this can be modified later
         return self.name == other.name  # Assuming name uniqueness for the purpose of this example
     
     def display(self):
