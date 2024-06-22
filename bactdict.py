@@ -29,7 +29,7 @@ CANDIDA_LIST = {
     'Candida albicans': 'Candida albicans/glabrata',
     'Candida glabrata': 'Candida albicans/glabrata',
     'Candida krusei': 'Candida krusei/tropicalis',
-    'Candida tropicalis': 'Candida krusei/tropicalis',
+    'Candida tropicalis': 'Candida krusei/tropicalis'
 }
 
 
