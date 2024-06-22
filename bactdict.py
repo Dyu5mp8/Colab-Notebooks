@@ -25,6 +25,14 @@ T2_NORMALIZED_NAMES = {
     'Pseudomonas aeruginosa-DNA, T2': 'Pseudomonas aeruginosa'
 }
 
+CANDIDA_LIST = {
+    'Candida albicans': 'Candida albicans/glabrata',
+    'Candida glabrata': 'Candida albicans/glabrata',
+    'Candida krusei': 'Candida krusei/tropicalis',
+    'Candida tropicalis': 'Candida krusei/tropicalis',
+}
+
+
 BC_NORMALIZED_NAMES = {
     'Escherichia coli ESBL': 'Escherichia coli',
     'Klebsiella pneumoniae ESBL': 'Klebsiella pneumoniae',
