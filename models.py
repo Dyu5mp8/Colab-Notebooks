@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field, InitVar
 from typing import List, Dict, Set
 from datetime import datetime
-from bactdict import CONTAMINANT_LIST, T2_NORMALIZED_NAMES, BC_NORMALIZED_NAMES, T2_LIST, SPECIMEN_CATEGORY_MAP
+from bactdict import CONTAMINANT_LIST, T2_NORMALIZED_NAMES, BC_NORMALIZED_NAMES, T2_LIST, SPECIMEN_CATEGORY_MAP, CANDIDA_LIST
 
 @dataclass
 class Isolate:
@@ -19,7 +19,7 @@ class Isolate:
     def __eq__(self, other):
         if not isinstance(other, Isolate):
             return False
-        return self.name == other.name  # Assuming name uniqueness for the purpose of this example
+        return CANDIDA_LIST.get(self.name, self.name) == CANDIDA_LIST.get(other.name, other.name)  # Assuming name uniqueness for the purpose of this example
     
     def display(self):
         print(f"\t\t\t |-- Isolate: {self.name}, {self.relevance()}, {self.t2_included()}")
